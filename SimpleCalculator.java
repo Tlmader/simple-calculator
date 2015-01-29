@@ -17,59 +17,66 @@ public class SimpleCalculator {
 		double secondNumber;
 		double result;
 		
-		System.out.print("Choose an operation:\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division\n");
-		operation = input.nextInt();
-	
-		if (operation == 1) { // Addition
-			System.out.print("Enter first number: ");
-			firstNumber = input.nextDouble();
-
-			System.out.print("Enter second number: ");
-			secondNumber = input.nextDouble();
-
-			result = firstNumber + secondNumber;
-
-			System.out.print("The sum is " + result);
+		System.out.println("Choose an operation:\n1-Addition\n2-Subtraction\n3-Multiplication\n4-Division\n5-Exit");
 		
-		} else if (operation == 2) { // Subtraction
-
-			System.out.print("Enter first number: ");
-			firstNumber = input.nextDouble();
-
-			System.out.print("Enter second number: ");
-			secondNumber = input.nextDouble();
-
-			result = firstNumber - secondNumber;
-
-			System.out.print("The subtrahend is " + result);
+		do {
+			operation = input.nextInt();
 		
-		} else if (operation == 3) { // Multiplication
-		
-			System.out.print("Enter first number: ");
-			firstNumber = input.nextDouble();
+			if (operation == 1) { // Addition
+				System.out.print("Enter first number: ");
+				firstNumber = input.nextDouble();
 
-			System.out.print("Enter second number: ");
-			secondNumber = input.nextDouble();
+				System.out.print("Enter second number: ");
+				secondNumber = input.nextDouble();
 
-			result = firstNumber * secondNumber;
+				result = firstNumber + secondNumber;
 
-			System.out.print("The product is " + result);
-		
-		} else if (operation == 4) { // Division
-		
-			System.out.print("Enter first number: ");
-			firstNumber = input.nextDouble();
-
-			System.out.print("Enter second number: ");
-			secondNumber = input.nextDouble();
-
-			result = firstNumber / secondNumber;
-
-			System.out.print("The quotient is " + result);
+				System.out.print("The sum is " + result);
 			
-		} else { // My own personal touch
+			} else if (operation == 2) { // Subtraction
+
+				System.out.print("Enter first number: ");
+				firstNumber = input.nextDouble();
+
+				System.out.print("Enter second number: ");
+				secondNumber = input.nextDouble();
+
+				result = firstNumber - secondNumber;
+
+				System.out.print("The subtrahend is " + result);
 			
-			System.out.print("You're doing it wrong.");
-		}
+			} else if (operation == 3) { // Multiplication
+			
+				System.out.print("Enter first number: ");
+				firstNumber = input.nextDouble();
+
+				System.out.print("Enter second number: ");
+				secondNumber = input.nextDouble();
+
+				result = firstNumber * secondNumber;
+
+				System.out.print("The product is " + result);
+			
+			} else if (operation == 4) { // Division
+			
+				System.out.print("Enter first number: ");
+				firstNumber = input.nextDouble();
+
+				System.out.print("Enter second number: ");
+				secondNumber = input.nextDouble();
+
+				result = firstNumber / secondNumber;
+
+				System.out.print("The quotient is " + result);
+				
+			} else if (operation == 5){
+				System.out.println("Goodbye");
+				System.exit(0);
+				
+			} else { // My own personal touch
+				
+				System.out.println("You're doing it wrong.");
+			}
+		} while (operation < 1 || operation > 5);
 	}
 }
